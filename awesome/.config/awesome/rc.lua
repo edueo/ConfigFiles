@@ -311,8 +311,9 @@ globalkeys = gears.table.join(
               {description = "restore minimized", group = "client"}),
 
     -- Prompt
-    awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
-              {description = "run prompt", group = "launcher"}),
+    awful.key({ modkey },            "r",     function () 
+    awful.util.spawn("dmenu_run") end,
+    	{description = "run dmenu", group = "launcher"}),
 
     awful.key({ modkey }, "x",
               function ()
@@ -562,3 +563,8 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+-- 
+
+-- Autostart Applications
+awful.spawn.with_shell("compton")
+awful.spawn.with_shell("nitrogen --restore")
