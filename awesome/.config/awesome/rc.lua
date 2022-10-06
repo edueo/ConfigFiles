@@ -533,3 +533,5 @@ beautiful.useless_gap = 3
 -- Autostart Applications
 awful.spawn.with_shell("compton")
 awful.spawn.with_shell("nitrogen --set-zoom-fill --random /usr/share/backgrounds")
+awful.spawn.with_shell("xrandr --output eDP-1 --off --output HDMI-1 --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1 --off --output DP-2 --off")
+
