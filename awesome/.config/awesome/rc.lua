@@ -320,6 +320,10 @@ globalkeys = gears.table.join(
     awful.util.spawn("firefox") end,
     	{description = "run firefox", group = "applications"}),
 
+    -- flameshot
+    awful.key({},            "Print",     function () 
+    awful.util.spawn("flameshot gui") end,
+    	{description = "run flameshot", group = "applications"}),
 
    
     awful.key({ modkey }, "x",
